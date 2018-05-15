@@ -6,6 +6,7 @@ import DocumentTitle from 'react-document-title';
 
 // Import Utilities
 import { ExtractPages, ExtractSections, GetPageTitle } from '../../utilities/content-utils';
+import isClient from '../../utilities/is-client';
 
 // Import Components
 import NotificationBar from '../NotificationBar/NotificationBar';
@@ -17,10 +18,8 @@ import Sponsors from '../Sponsors/Sponsors';
 import Sidebar from '../Sidebar/Sidebar';
 import Footer from '../Footer/Footer';
 import Page from '../Page/Page';
+import Gitter from '../Gitter/Gitter';
 import Vote from '../Vote/Vote';
-
-// Import helpers
-import isClient from '../../utilities/is-client';
 
 // Load Styling
 import '../../styles/index';
@@ -102,6 +101,7 @@ class Site extends React.Component {
                               <Page
                                 { ...page }
                                 content={ content } />
+                              <Gitter />
                             </React.Fragment>
                           );
                         }} />
